@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> ITURBESEGUROS </title>
+        <!-- Favicon-->
+        
+        <link rel="icon" type="image/x-icon" href= "{% static 'assets/icon.ico' %}"/>
+        <!-- Bootstrap icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand">BIENVENIDOS A <em>ITURBESEGUROS</em>!</a>
+                <a class="btn btn-primary" href="{% url 'IturbeSeguros'%}">Inicio</a>
+                <a class="btn btn-primary" href="{% url 'poliza' %}">Poliza</a>
+                <a class="btn btn-primary" href="{% url 'auto'%}">Autos</a>
+                <a class="btn btn-primary" href="{% url 'usuario'%}">Usuarios</a>
+            </div>
+        </nav>
+        <!-- Masthead-->      
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            {% block content %}
+                            <!-- Page heading-->
+                            <h1 class="mb-5" ><em>Mas de 10 Años de Trayectoria, ven y Consulta con nostros.</em></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="fa-solid fa-truck"></i></div>
+                            <h3> AUTO </h3>
+                            <p class="lead mb-0"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="fa-solid fa-suitcase-medical"></i></div>
+                            <h3> SALUD </h3>
+                            <p class="lead mb-0"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="fa-solid fa-briefcase"></i></div>
+                            <h3>EMPRESAS </h3>
+                            <p class="lead mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Image Showcases-->
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url({% static '/assets/img/bg-1.jpg'%})"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Liderazgo .</h2>
+                        <p class="lead mb-0">Somos una referencia de altura del mercado asegurador, tomamos iniciativas, asumimos responsabilidades y nos adaptamos al cambio.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url({% static 'assets/img/bg-2.jpg' %})"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Constancia</h2>
+                        <p class="lead mb-0"> Contamos con la perseverancia, la voluntad y el propósito continuo para cumplir con nuestros clientes y lograr las metas organizacionales </p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url({% static 'assets/img/bg-3.jpg' %})"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2> Trayectoria </h2>
+                        <p class="lead mb-0">Más de 8 décadas de trayectoria en el mercado asegurador.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url({% static 'assets/img/bg-showcase-4.jpg' %})"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2> Versatilidad </h2>
+                <p class="lead mb-0"> Nuestro equipo humano cuenta con diversas capacidades para adaptarse a los constantes cambios..</p>
+            </div>
+        </div>
+    </div>
+        </section>
+        <!-- Testimonials-->
+        <section class="testimonials text-center bg-light">
+            <div class="container">
+                <h2 class="mb-5"> Aliados Comerciales </h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="{% static "assets/img/testi-1.jpg"%}" alt="..." />
+                            <h5> Seguros Caracas </h5>
+                            <p class="font-weight-light mb-0">"En Seguros Caracas tenemos visión de futuro, Visión 2020 en la que Cambiar y 
+                            Permanecer se ha convertido en nuestro norte en este nuevo capítulo, con valores que nos guían para Perdurar y Crecer"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="{% static "/assets/img/testi-2.jpg"%}" alt="..." />
+                            <h5>La Internacional de Seguros</h5>
+                            <p class="font-weight-light mb-0">"Brindar bienestar y tranquilidad a nuestros asegurados con actualización de nuestros productos para adaptarnos a las exigencias del mercado y
+                            ofrecer un servicio de óptima calidad que satisfaga las necesidades de nuestros clientes."</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src= "{% static '/assets/img/testi-3.jpg' %}" alt="..." />
+                            <h5>Mercantil Seguros</h5>
+                            <p class="font-weight-light mb-0">"Brindar soluciones tecnológicas orientadas a la satisfacción de nuestros clientes, poniendo a su alcance productos adecuados a sus necesidades,
+                            y la prestación de un servicio post venta diferenciado y eficiente."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                                {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <p class="text-muted small mb-4 mb-lg-0">&copy;IturbeSeguros 2023. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="fa-solid fa-square-share-nodes fa-2xl"></i></a>
+                            </li>
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="fa-regular fa-comment fa-2xl"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!"><i class="fa-solid fa-users fa-2xl"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

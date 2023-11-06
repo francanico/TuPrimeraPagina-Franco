@@ -1,0 +1,20 @@
+{% extends "IturbeSeguros.html" %}
+
+{% block content %}
+
+<h1> Crear Auto </h1>
+
+<form method ="POST">
+    {% csrf_token %}
+    {{ formuauto.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+<br>
+<br>
+    <a class="btn btn-primary" href="{% url 'auto' %}">Volver</a>
+    <br>
+    <br>
+    <br>
+
+{% endblock %}

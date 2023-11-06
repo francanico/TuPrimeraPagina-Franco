@@ -1,0 +1,34 @@
+{% extends "IturbeSeguros.html" %}
+
+{% block content %}
+<h1> <em>Buscador de Polizas</em> </h1>
+<br>
+<form action='' method='GET'>
+    <input type="search" name="categoria" id="categoria" placeholder= "Auto, Viaje, Salud">
+    <input type="submit" value="Buscar">
+</form>
+<br>
+
+{% if polizas %}
+
+<p> <u> Buscando Datos: </u> {{categoria}} </p>
+
+<ul>
+{% for poliza in polizas %}
+<li> <em>Asegurado {{ poliza.nombre }} || Suma Asegurada {{ poliza.precio }} $ || Tipo de Poliza: {{poliza.categoria}} </em></li>
+{% endfor %}
+
+</ul>  
+<br>
+{% else %}
+<p> No hay datos con esa descripcion. </p>
+
+{% endif %}
+<br>
+<p style="color: Red";>  {{respuesta}} </p>
+<br>
+    <a class="btn btn-primary" href="{% url 'poliza' %}">Volver</a>
+    <br>
+    <br>
+    <br>
+{% endblock %}

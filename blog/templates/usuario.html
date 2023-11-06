@@ -1,0 +1,12 @@
+{% extends "IturbeSeguros.html" %}
+
+{% block content %}
+<h1> Usuarios </h1>
+
+    <br>
+    <a class="btn btn-primary" href="{% url 'crear_usuario' %}">Crear Usuario</a>
+    <a class="btn btn-primary" href="{% url 'buscadoruser' %}">Buscar Usuario</a>
+    <br>
+    <br>
+    
+    {% endblock %}

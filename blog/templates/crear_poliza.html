@@ -1,0 +1,19 @@
+{% extends "IturbeSeguros.html" %}
+
+{% block content %}
+
+<h1> Agregar Poliza </h1>
+<form method ="POST">
+    {% csrf_token %}
+    {{ form1.as_p }}
+    <button type="submit">Guardar</button>
+    <br>
+</form>
+<br>
+<br>
+    <a class="btn btn-primary" href="{% url 'poliza' %}">Volver</a>
+    <br>
+    <br>
+    <br>
+
+{% endblock %}

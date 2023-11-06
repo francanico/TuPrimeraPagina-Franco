@@ -1,0 +1,35 @@
+{% extends "IturbeSeguros.html" %}
+
+{% block content %}
+<h1> <em>Buscador de Usuario</em> </h1>
+<br>
+<form action='' method='GET'>
+    <input type="search" name="usuario" id="usuario" placeholder= "Ingresa un Nombre" >
+    <input type="submit" value="Buscar">
+</form>
+<br>
+
+{% if names %}
+
+<p> <u> Buscando Datos: </u> {{usuario}} </p>
+
+<ul>
+{% for name in names %}
+<li> <em> Usuario {{ name.nombre }} || Edad {{ name.edad }} Años || N° de Poliza: {{name.registro}} </em></li>
+{% endfor %}
+
+</ul>  
+<br>
+{% else %}
+<p> No hay datos con esa descripcion. </p>
+
+{% endif %}
+
+<p style="color: Red";>  {{respuesta}} </p>
+<br>
+<br>
+    <a class="btn btn-primary" href="{% url 'usuario' %}">Volver</a>
+    <br>
+    <br>
+    <br>
+{% endblock %}

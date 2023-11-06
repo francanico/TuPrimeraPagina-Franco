@@ -1,0 +1,35 @@
+{% extends "IturbeSeguros.html" %}
+
+{% block content %}
+<h1> <em>Buscar Auto</em> </h1>
+<br>
+<form action='' method='GET'>
+    <input type="search" name="placa" id="placa" placeholder= "Ingresa Placa" >
+    <input type="submit" value="Buscar">
+</form>
+<br>
+
+{% if placas %}
+
+<p> <u> Buscando Datos: </u> {{placa}} </p>
+
+<ul>
+{% for placa in placas %}
+<li> <em> Marca: {{ placa.marca }} || Modelo: {{ placa.modelo }}  || Color: {{placa.color}}  || Placa: {{placa.placa}}  || Kms: {{placa.kilometraje}}  </em></li>
+{% endfor %}
+
+</ul>  
+<br>
+{% else %}
+<p> No hay datos con esa descripcion. </p>
+
+{% endif %}
+
+<p style="color: Red";>  {{respuesta}} </p>
+<br>
+<br>
+    <a class="btn btn-primary" href="{% url 'auto' %}">Volver</a>
+    <br>
+    <br>
+    <br>
+{% endblock %}
