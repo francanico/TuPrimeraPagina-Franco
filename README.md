@@ -22,11 +22,14 @@ Los usuarios pueden realizar las siguientes accciones:
 
 ##### Front-End
 HTML 5
+
 CSS 3
+
 Bootstrap 5.2
 
 ##### Back-End
 Python 3.10.4
+
 Django 4.0
 
 ## Personas que participaron
